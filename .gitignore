@@ -1,0 +1,29 @@
+# --- 1. 金鑰與環境變數 (必備) ---
+.env
+*.env
+.gitignore.swp
+
+# --- 2. 實驗室伺服器環境 (避免上傳數 GB 的 Miniconda) ---
+miniconda3/
+Miniconda3-latest-Linux-x86_64.sh
+.anaconda/
+.conda/
+.config/
+.local/
+.cache/
+.nv/
+.antigravity-server/
+.gemini/
+snap/
+
+# --- 3. 專案數據與日誌  ---
+logs/
+*.log
+
+# --- 4. Python 與編輯器暫存 ---
+__pycache__/
+*.py[cod]
+.vscode/
+.antigravity/
+.bash_history
+.google_authenticator

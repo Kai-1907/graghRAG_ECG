@@ -1,0 +1,19 @@
+ECG Component Definitions (NeuroKit2 Standards):
+
+P-wave: Represents atrial depolarization as the electrical impulse spreads from the SA node through the atria. A normal P-wave indicates a sinus rhythm origin.
+
+QRS Complex: Represents rapid ventricular depolarization. Because the ventricles have a large muscle mass, the QRS complex is the most prominent feature of the ECG.
+
+Q-wave: The first downward deflection.
+
+R-peak: The highest upward deflection (used for heart rate calculation).
+
+S-wave: The downward deflection following the R-peak.
+
+T-wave: Represents ventricular repolarization. It occurs after the QRS complex and indicates the recovery phase of the heart's ventricles.
+
+PR Interval: The time from the onset of the P-wave to the start of the QRS complex. Prolonged PR intervals may suggest first-degree AV block.
+
+ST Segment: The flat section between the end of the QRS and the start of the T-wave. Elevation or depression of this segment is a critical marker for myocardial ischemia or infarction.
+
+QT Interval: Represents the total time for ventricular depolarization and repolarization.

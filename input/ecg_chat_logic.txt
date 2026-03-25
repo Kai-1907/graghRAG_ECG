@@ -1,0 +1,17 @@
+ECG-Chat Diagnostic Logic and Knowledge Summary:
+
+Multimodal Alignment: ECG-Chat integrates ECG waveform data with medical text reports using contrastive learning. It aligns fine-grained signal features (P-QRS-T segments) with professional clinical descriptions.
+
+Diagnosis-Driven Prompting (DDP): The model uses a structured prompt approach to improve accuracy. It focuses on identifying specific arrhythmias and conduction abnormalities by analyzing rhythmic patterns and morphological changes.
+
+Clinical Reasoning Pipeline:
+
+Step 1: Feature Extraction (via ECG Encoder).
+
+Step 2: Knowledge Retrieval (aligning signal features with cardiology knowledge).
+
+Step 3: Report Generation (generating professional summaries using a LaTeX-based pipeline).
+
+Key Abnormalities Covered: Atrial Fibrillation (AFib), Premature Ventricular Contractions (PVC), ST-segment changes (Ischemia/Infarction), and Conduction Blocks.
+
+Diagnostic Goal: To bridge the gap between raw signal analysis and human-readable medical advice, specifically focusing on explainable AI diagnosis.
