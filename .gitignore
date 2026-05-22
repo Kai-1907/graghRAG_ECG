@@ -1,9 +1,9 @@
-# --- 1. 金鑰與環境變數 (必備) ---
+# --- 1. 金鑰與環境變數 ---
 .env
 *.env
 .gitignore.swp
 
-# --- 2. 實驗室伺服器環境 (避免上傳數 GB 的 Miniconda) ---
+# --- 2. 實驗室伺服器環境 ---
 miniconda3/
 Miniconda3-latest-Linux-x86_64.sh
 .anaconda/
@@ -27,3 +27,22 @@ __pycache__/
 .antigravity/
 .bash_history
 .google_authenticator
+
+# --- 5. GraphRAG 專用排除欄位 ---
+# 排除 GraphRAG 自動生成的輸出資料夾（包含 Parquet 檔案、圖資、快取、嵌入向量）
+**/output/
+**/artifacts/
+# 排除本地端的 SQLite 資料庫或快取資料庫
+*.db
+*.sqlite
+
+# --- 6. 醫療與心電圖原始數據 ---
+# 確保實驗室用於分析的心電圖去識別化文字或原始資料不會流出
+data/
+raw_data/
+dataset/
+*.csv
+*.jsonl
+
+# 排除本地的 GraphRAG 快取資料夾
+cache/

@@ -2,24 +2,27 @@
 models:
   default_chat_model:
     type: chat
-    model_provider: openai
-    auth_type: api_key
-    api_key: ${GRAPHRAG_API_KEY}
-    model: gpt-4o-mini
+    model_provider: ollama
+    auth_type: api_key        # 改回 api_key (騙過 Pydantic 檢查)
+    api_key: "ollama"         # 隨便給一個字串
+    api_base: http://localhost:11434
+    model: llama3:latest
     model_supports_json: true
-    concurrent_requests: 25
+    concurrent_requests: 5
     async_mode: threaded
     retry_strategy: exponential_backoff
     max_retries: 10
     tokens_per_minute: null
     requests_per_minute: null
+
   default_embedding_model:
     type: embedding
-    model_provider: openai
-    auth_type: api_key
-    api_key: ${GRAPHRAG_API_KEY}
-    model: text-embedding-3-small
-    concurrent_requests: 25
+    model_provider: ollama
+    auth_type: api_key        # 改回 api_key
+    api_key: "ollama"         # 隨便給一個字串
+    api_base: http://localhost:11434
+    model: nomic-embed-text:latest
+    concurrent_requests: 5
     async_mode: threaded
     retry_strategy: exponential_backoff
     max_retries: 10
